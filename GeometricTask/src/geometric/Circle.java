@@ -16,12 +16,9 @@ public class Circle extends Coordinate {
 
 		return 3.14 * Math.pow(radius, 2);
 	}
-	public boolean add(double newXCircle, double newYCircle,
-			double newRadiusCircle, double barSquare) {
+	public boolean add(double barSquare) {
 
-		Circle circle = new Circle(newXCircle, newYCircle, newRadiusCircle);
-
-		if (barSquare > circle.getCircleSquare()) {
+		if (barSquare > getCircleSquare()) {
 			return true;
 		} else {
 			return false;
